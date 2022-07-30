@@ -87,16 +87,15 @@ function merge(leftArr, rightArr) {
       rightIndex += 1;
     }
   }
-  return resultArr.concat(leftArr.slice(leftIndex)).concat(rightArr.slice(rightIndex))
+  return resultArr
+    .concat(leftArr.slice(leftIndex))
+    .concat(rightArr.slice(rightIndex));
 }
 
-let arrr = [12, 3, 16, 6, 5, 1]
-// let _arrr = ['atwau', 'zendo', 'cow', 'james', 'abirya', 'okello']
+let arrr = [12, 3, 16, 6, 5, 1];
 
-let _arrr = ['atwau', 'zendo', 'cow', 'James', 'Abirya', 'okello']
+let _arrr = ['Areae', 'zendo', 'cow', 'James', 'Ayoua', 'Belinda'];
 
-console.log(mergeSort(_arrr))
+console.log(mergeSort(_arrr));
 
-console.log("Another",_arrr.sort())
-
-
+console.log('Another', _arrr.sort());
