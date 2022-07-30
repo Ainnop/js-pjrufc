@@ -96,6 +96,39 @@ let arrr = [12, 3, 16, 6, 5, 1];
 
 let _arrr = ['Areae', 'zendo', 'cow', 'James', 'Ayoua', 'Belinda'];
 
-console.log(mergeSort(_arrr));
+// console.log(mergeSort(_arrr));
 
-console.log('Another', _arrr.sort());
+// console.log('Another', _arrr.sort());
+
+function fib(n) {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  return fib(n - 1) + fib(n - 2);
+}
+
+// console.log(fib(4))
+
+// O(n!)
+function factorial(n) {
+  // let sum = 1;
+  if(n === 0){
+    console.log("****")
+    return 
+  }
+  // let sum = 1;
+  // for (let i = 1; i <= n; i++) {
+  //   sum *= i;
+  // }
+  // return sum;
+
+  for (let i = 1; i <= n; i++) {
+    factorial(n-1)
+  }
+  
+}
+
+console.log(factorial(3));
