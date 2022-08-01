@@ -115,9 +115,9 @@ function fib(n) {
 // O(n!)
 function factorial(n) {
   // let sum = 1;
-  if(n === 0){
-    console.log("****")
-    return 
+  if (n === 0) {
+    console.log('****');
+    return;
   }
   // let sum = 1;
   // for (let i = 1; i <= n; i++) {
@@ -126,9 +126,36 @@ function factorial(n) {
   // return sum;
 
   for (let i = 1; i <= n; i++) {
-    factorial(n-1)
+    factorial(n - 1);
   }
-  
+}
+// console.log(factorial(3));
+
+function factorialArray(n) {
+  // if(n===0) return 1
+
+  function factoria(k) {
+    return k * factoria(k - 1);
+  }
+
+  function _facto(l) {
+    let s = 1;
+    for (let i = 1; i <= l; i++) {
+      s *= i;
+    }
+    return s;
+  }
+  console.log(n);
+  console.log(n.map((p) => _facto(p)));
+
+  // let num =1
+  // n.map(d => {
+  //   for(let i=1; i<=d; i++){
+  //     num += i
+  //   }
+  //   console.log(num)
+  // })
+  // return num
 }
 
-console.log(factorial(3));
+console.log(factorialArray([2, 3, 5, 7, 8]));
