@@ -113,26 +113,9 @@ function fib(n) {
 // console.log(fib(4))
 
 // O(n!)
-function factorial(n) {
-  // let sum = 1;
-  if (n === 0) {
-    console.log('****');
-    return;
-  }
-  // let sum = 1;
-  // for (let i = 1; i <= n; i++) {
-  //   sum *= i;
-  // }
-  // return sum;
-
-  for (let i = 1; i <= n; i++) {
-    factorial(n - 1);
-  }
-}
-// console.log(factorial(3));
 
 function factorialArray(n) {
-  if (n === 0 || n === 1)  return 1; 
+  if (n === 0 || n === 1) return 1;
 
   function factoria(k) {
     return k * factoria(k - 1);
