@@ -25,3 +25,24 @@ function NumSum(array, targetSum) {
 }
 
 console.log(NumSum([3, 5, -4, 8, 11, 1, -1, 6], 10));
+
+
+// O(nLog(n)) | O(1)
+function _twoNumSum(array, targetSum) {
+  array.sort();
+  let left = 0;
+  let right = array.length - 1;
+  while (left < right) {
+    let currentSum = array[left] + array[right];
+    if (currentSum === targetSum) {
+      return [array[left], array[right]];
+    } else if (currentSum < targetSum) {
+      left += 1;
+    } else if (currentSum > targetSum) {
+      right -= 1;
+    }
+  }
+  return [];
+}
+
+console.log(_twoNumSum([3, 5, -4, 8, 11, 1, -1, 6], 10));
