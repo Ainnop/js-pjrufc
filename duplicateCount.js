@@ -10,3 +10,14 @@ function CountDuplicate(text) {
   const setArray = new Set(results);
   return setArray.size;
 }
+
+function duplicateCount(text) {
+  return (
+    text
+      .toLowerCase()
+      .split('')
+      .sort()
+      .join('')
+      .match(/([^])\1+/g) || []
+  ).length;
+}
